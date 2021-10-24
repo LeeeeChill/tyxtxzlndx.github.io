@@ -1,0 +1,174 @@
+ul,li,body,p,a,h2,span,form,input{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+HTML,body{
+    position: relative;
+    height: 100%;
+}
+.all{
+    position: relative;
+    width: 480px;
+    height: 600px;
+    margin: 0 auto;
+    background-color: rgba(71, 71, 71, 0.699);
+
+}
+#wrap{
+    position: relative;
+    width:480px;
+    height: 200px;
+    margin: 0 auto;
+}
+#wrap img{
+    position: absolute;
+    width: 480px;
+    height: 200px;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+#wrap .on{
+    transition: 0.1s;
+    opacity: 1;
+    }
+.btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -44px;
+    opacity: 0;
+}
+.btn span{
+    float: left;
+    width: 8px;
+    height: 8px;
+    border:2px solid rgba(255,255,255,0.4);
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.btn .active{
+    background: white;
+    cursor: pointer;
+}
+.left,.right{
+    display: block;
+    width: 37px;
+    height: 53px;
+    position: absolute;
+    top: 50%;
+    margin-top: -27px;
+    cursor: pointer;
+}
+.top img{
+    position: absolute;
+    top: 32px;
+    left: 135px;
+    width: 202px;
+    height: 134px;
+}
+.buttom{
+    position: relative;
+    width: 480px;
+    height: 600px;
+    background-color: #fff;   
+}
+#p1{
+    position: absolute;
+    top: 14px;
+    left: 20px;
+}
+.buttom .t1{
+    position: absolute;
+    top: 30px;
+    left: -5px;
+    transform: scale(0.35);
+}
+#p2{
+    position: absolute;
+    top: 72px;
+    left: 89px;
+    font-size: 20px;
+}
+.buttom .i1{
+    position: absolute;
+    top: 71px;
+    left: 151px;
+    width: 200px;
+    height: 30px;
+    font-size: 20px;
+    border: transparent;
+    line-height: 30px;
+}
+.buttom .t2{
+    position: absolute;
+    top: 95px;
+    left: -5px;
+    transform: scale(0.35);
+}
+#p3{
+    position: absolute;
+    top: 137px;
+    left: 89px;
+    font-size: 20px;
+}
+.buttom .i2{
+    position: absolute;
+    top: 136px;
+    left: 151px;
+    width: 200px;
+    font-size: 20px;
+    height: 30px;
+    border: transparent;
+    line-height: 30px;
+}
+.buttom .t3{
+    position: absolute;
+    top: 155px;
+    left: -5px;
+    transform: scale(0.35);
+}
+#p4{
+    position: absolute;
+    top: 198px;
+    left: 89px;
+    font-size: 20px;
+}
+.buttom .i3{
+    position: absolute;
+    top: 197px;
+    left: 151px;
+    width: 200px;
+    height: 30px;
+    font-size: 20px;
+    border: transparent;
+    line-height: 30px;
+}
+.buttom .t4{
+    position: absolute;
+    top: 235px;
+    left: 5px;
+    transform: scale(0.5);
+}
+.buttom .p5{
+    position: absolute;
+    top: 259px;
+    left: 89px;
+    font-size: 20px;
+}
+.buttom .p6{
+    position: absolute;
+    top: 389px;
+    width: 480px;
+    text-align: center;
+    font-size: 14px;
+    color: #999999;
+}
+#show{
+    position: absolute;
+    top: 260px;
+    left: 151px;
+    font-size: 20px;
+}
