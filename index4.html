@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./index4.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>申请详情</title>
+    <script>
+    function showTime(){
+        var now=new Date();
+        var year=now.getFullYear();
+        var month=now.getMonth()+1; //js获取的月份是从0开始；
+        var day=now.getDate();
+        document.getElementById("chuxiao1").innerHTML=""+year+"/"+month+"/"+day;
+        document.getElementById("fanxiao1").innerHTML=""+year+"/"+month+"/"+day;
+        t=setTimeout('showTime()',500)
+  }
+  function getRequest(urlStr) {
+        let url = '';
+        if (typeof urlStr == "undefined") url = decodeURI(location.search);
+        else url = "?" + urlStr.split("?")[1];
+
+        let theRequest = {};
+        if (url.indexOf("?") !== -1) {
+            let str = url.substr(1);
+            let strs = str.split("&");
+            if (strs[0] !== 'undefined') {
+                for (let i = 0; i < strs.length; i++) {
+                    theRequest[strs[i].split("=")[0]] = decodeURI(strs[i].split("=")[1]);
+                }
+            }
+        }
+        return theRequest;
+    }
+    window.onload = function () {
+        showTime();
+        let obj = getRequest(window.location.href);
+        document.getElementById('top').innerText += obj['userxh'];
+        document.getElementById('top').innerText += " " +obj['username'];
+        document.getElementById('top').innerText += " " +obj['userxy'];
+        document.getElementById('i1').innerText = obj['useryy'];
+
+
+         document.getElementById('b2').addEventListener('click', function () {
+            let param = location.search;
+            window.location.href = 'index1.html' + param;
+        })
+         document.getElementById('b3').addEventListener('click', function () {
+            let param = location.search;
+            window.location.href = 'index.html' + param;
+        })
+    }
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <p id="top"></p>
+        <p class="mudi">目的地</p>
+        <p class="mudi1">沈阳市内</p>
+        <p class="chuxiao">申请出校日期</p>
+        <p id="chuxiao1"></p>
+        <p class="fanxiao">申请返校日期</p>
+        <p id="fanxiao1"></p>
+        <p class="yy">外出原因</p>
+        <p id="i1"></p>
+        <p class="sjcx">实际出校时间</p>
+        <p class="sjcx1"></p>
+        <p class="sjfx">实际返校时间</p>
+        <p class="sjfx1"></p>
+        <p class="spqk">出校审批情况</p>
+        <p class="spqk1">已同意</p>
+        <p class="xc">行程轨迹</p>
+        <textarea name="summary" placeholder="请如实详细填写您的行程轨迹（500字内），并妥善留存相关证明材料，填写后方可生成入校通行证" rows="7" cols="90" class="i2"></textarea>
+        <button class="b1">提交行程</button>
+        <p class="qqq">返校审批情况</p>
+        <p class="qqq1">已同意</p>
+        <button id="b2">生成出校通行证</button>
+        <button id="b3">生成返校通行证</button>
+        <button class="b4">返回申请列表</button>
+    </div>
+</body>
+</html>
